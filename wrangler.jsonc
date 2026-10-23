@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "rmw-li",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-22",
+  "workers_dev": true
+
+  // PRODUCTION CUTOVER (only after testing on *.workers.dev):
+  // 1. Ensure rmw.li is an active zone in your Cloudflare account.
+  // 2. Remove any conflicting old DNS records for rmw.li.
+  // 3. Add a comma after "workers_dev": true and uncomment the lines below.
+  // "routes": [
+  //   { "pattern": "rmw.li", "custom_domain": true }
+  // ]
+}
